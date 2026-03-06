@@ -61,4 +61,5 @@ noise = np.random.normal(0, 5000, X_test_corrupted.shape[0])
 X_test_corrupted.iloc[:, 0] = X_test_corrupted.iloc[:, 0] + noise
 
 robust_preds = dp_model.predict(X_test_corrupted)
+
 print(f"Robustness Accuracy: {accuracy_score(y_test, robust_preds):.3f}")
